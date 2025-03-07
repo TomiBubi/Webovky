@@ -1,0 +1,365 @@
+/* Import fontu Aptos */
+@font-face {
+    font-family: 'Aptos';
+    src: url('cesta/k/fontu/Aptos-Regular.woff2') format('woff2'),
+         url('cesta/k/fontu/Aptos-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Obecné nastavení */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #c3c3c3;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(pozadi1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2; /* Nastavte požadovanou úroveň průhlednosti */
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+/* Hlavička */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-image: url(pozadi2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+header .logo {
+    max-height: 170px; /* Nastaví maximální výšku loga */
+    width: auto; /* Zachová poměr stran loga */
+    margin-left: 100px; /* Přidá odsazení vlevo */
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    color: #ff9900;
+}
+
+
+
+/* Sekce O nás */
+.about-section .section-title {
+    color: #000000; 
+    padding-top: 40px;
+}
+
+
+/* Sekce Kontaktujte nás */
+#contact {
+    margin: 50px auto;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #000;
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: #3C3D37;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #181C14;
+}
+
+
+
+/* Patička */
+footer {
+    background-image: url(pozadi2.jpeg);
+    color: rgb(0, 0, 0);   
+    padding: 10px 0;
+    margin-top: 20px;
+}
+.pata h2{
+    padding-left: 100px;
+
+}
+.pata h4{
+    padding-left: 110px;
+    size: 30px;
+}
+.pata p{
+    text-align: center;
+}
+
+
+
+
+/* Sekce Naše práce */
+.carousel {
+    text-align: center;
+    margin: auto;
+}
+
+#portfolio h2{
+    color: #000;
+}
+
+/* Hlavní obrázek */
+.carousel-main img {
+    width: 100%;
+    max-width: 800px; /* Maximální šířka hlavního obrázku */
+    height: auto; /* Zachová poměr stran */
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Náhledy */
+.carousel-thumbnails img {
+    width: 100px; /* Fixní šířka pro náhledy */
+    height: 75px; /* Fixní výška pro náhledy */
+    object-fit: cover; /* Oříznutí obrázku bez deformace */
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+/* Zvýraznění aktivního náhledu */
+.carousel-thumbnails img.active {
+    border-color: #181C14;
+    transform: scale(1.1);
+}
+
+/* Efekt při najetí na náhled */
+.carousel-thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+/*Nabídka služeb */
+.services-section .section-title {
+    color: #000000; 
+    padding-top: 40px;
+}
+:root {
+    --bg-color: #f5f7f9;
+    --box-bg: #3c3c3c;
+    --text-color: #9b9b9b;
+    --text-hover: #fff;
+    --overlay-bg: rgba(0, 0, 0, 0.8);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    font-family: Arial, sans-serif;
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.tech-section {
+    margin-bottom: 30px;
+}
+
+.tech-box {
+    display: flex;
+    background: var(--box-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    height: 320px;
+}
+
+.tech-info {
+    flex: 1;
+    padding: 30px;
+}
+
+.tech-image {
+    flex: 1;
+    position: relative;
+}
+
+.tech-image.left {
+    order: -1;
+}
+
+.tech-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    color: white;
+    font-size: 28px;
+    margin: 0 0 20px 0;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-item {
+    color: var(--text-color);
+    padding: 8px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.tech-item:hover {
+    color: var(--text-hover);
+}
+
+.tech-item.active {
+    color: var(--text-hover);
+}
+
+.spec-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-bg);
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spec-overlay.active {
+    opacity: 1;
+}
+
+.spec-overlay h3 {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+}
+
+.spec-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.spec-overlay li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .tech-box {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .tech-image {
+        height: 200px;
+    }
+    
+    .tech-image.left {
+        order: 0;
+    }
+}
