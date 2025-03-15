@@ -350,15 +350,42 @@ h2 {
 }
 
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    header nav {
+        margin-right: 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .page-content {
+        grid-template-columns: 1fr;
+    }
+
     .tech-box {
         flex-direction: column;
         height: auto;
     }
-    
+
     .tech-image {
         height: 200px;
     }
-    
+
     .tech-image.left {
         order: 0;
     }
